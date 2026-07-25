@@ -5,21 +5,32 @@
 
   <mat-grid-list
     gutterSize="16px"
-    [cols]="(umaColuna$ | async) ? 1 : (duasColunas$ | async) ? 2 : 3"
-    rowHeight="10em">
-    <mat-grid-tile [style.background]="'#00000020'"
-    [style.border-radius]="'8px'">
-      1
-    </mat-grid-tile>
-    <mat-grid-tile [style.background]="'#00000020'"
-    [style.border-radius]="'8px'">
-      2
-    </mat-grid-tile>
-    <mat-grid-tile [style.background]="'#00000020'"
-    [style.border-radius]="'8px'">
-      3
-    </mat-grid-tile>
+    [cols]="(umaColuna$ | async) ? 1 : (duasColunas$ | async) ? 2 : 4"
+    >
 
+    @for(favorito of favoritos$ | async; track $index) {
+      <mat-grid-tile  [style.background]="'#00000020'"
+      [style.border-radius]="'8px'">
+        <mat-card class="favorito-card">
+          <div style="text-align:center;">
+            <img mat-card-image src="{{ favorito.imagem }}" alt=""
+            style="width: 100%;"/>
+          </div>
+          <mat-card-content>
+            <h2>{{ favorito.titulo }}</h2>
+            <p>
+              {{ favorito.descricao }}
+            </p>
+            <div class="acoes">
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </div>
+          </mat-card-content>
+
+        </mat-card>
+      </mat-grid-tile>
+    }
   </mat-grid-list>
 
 </main>
+
