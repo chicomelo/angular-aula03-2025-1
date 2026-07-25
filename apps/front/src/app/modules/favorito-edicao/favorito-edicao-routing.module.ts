@@ -6,6 +6,13 @@ const routes: Routes = [
   {
     path: 'favorito-edicao',
     pathMatch: 'full',
+    component: FormFavoritoComponent,
+    data: {
+      id: '',
+    }
+  },
+  {
+    path: 'favorito-edicao/:id',
     component: FormFavoritoComponent
   }
 ];

@@ -13,7 +13,7 @@
       [style.border-radius]="'8px'">
         <mat-card class="favorito-card">
           <div style="text-align:center;">
-            <img mat-card-image src="{{ favorito.imagem }}" alt=""
+            <img mat-card-image [src]="favorito.imagem" [alt]="favorito.titulo"
             style="width: 100%;"/>
           </div>
           <mat-card-content>
@@ -22,8 +22,8 @@
               {{ favorito.descricao }}
             </p>
             <div class="acoes">
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
+              <a mat-button [href]="favorito.url" target="_blank">Visitar</a>
+              <a mat-button routerLink="/favorito-edicao/{{ favorito._id }}">Editar</a>
             </div>
           </mat-card-content>
 

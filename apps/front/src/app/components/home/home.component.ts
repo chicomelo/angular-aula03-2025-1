@@ -7,11 +7,12 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs';
 
 import { FavoritoService } from '../../services/favorito/favorito.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule],
+  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

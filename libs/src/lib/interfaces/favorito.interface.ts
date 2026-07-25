@@ -3,5 +3,5 @@ export interface IFavorito {
   imagem: string;
   titulo: string;
   descricao: string;
-  ur: string;
+  url: string;
 }

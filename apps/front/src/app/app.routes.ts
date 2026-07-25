@@ -21,6 +21,11 @@ export const appRoutes: Route[] = [
   },
   {
     title: 'Favorito edição',
+    path: 'favorito-edicao/:id',
+    component: FormFavoritoComponent
+  },
+  {
+    title: 'Favorito edição',
     path: 'favorito-edicao',
     component: FormFavoritoComponent
   },
