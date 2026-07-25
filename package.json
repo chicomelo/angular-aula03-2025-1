@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many --target=serve --projects=front,api --parallel",
+    "start": "nx run-many --target=serve --projects=front,api --parallel --poll=500",
     "build": "nx run-many --target=build --projects=front,api",
     "set-up-mongodb": "node tools/setup-mongodb.mjs",
     "test": "nx run-many --target=test --projects=front,api"
