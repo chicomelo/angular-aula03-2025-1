@@ -20,7 +20,18 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>front</span>
+      <span>Favoritos</span>
+      <span class="spacer"></span>
+      <button
+        mat-fab
+        extended
+        color="accent"
+        aria-label="Adicionar Favorito"
+        routerLink="/favorito-edicao">
+        <mat-icon>bookmark_add</mat-icon>
+        Novo
+      </button>
+
     </mat-toolbar>
     <!-- Add Content Here -->
      <router-outlet></router-outlet>
