@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormFavoritoComponent } from './favorito-edicao/components/form-favorito/form-favorito.component';
+import { FormFavoritoComponent } from './components/form-favorito/form-favorito.component';
 
 const routes: Routes = [
   {
